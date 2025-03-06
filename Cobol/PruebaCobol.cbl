@@ -2,8 +2,8 @@
        PROGRAM-ID. LEARN-COBOL.
 
        DATE-WRITTEN "04/03/2025".
-       DATE-MODIFIED "04/03/2025".
-       DATE-COMPILED "04/03/2025".
+       DATE-MODIFIED "05/03/2025".
+       DATE-COMPILED "05/03/2025".
        INSTALLATION "Pepe INC SAS".
        SECURITY "Open Source".
        REMARKS "Esta es la primera prueba".
@@ -12,13 +12,24 @@
        CONFIGURATION SECTION.
            SPECIAL-NAMES.
                DECIMAL-POINT IS COMMA.
-               SYMBOLIC CHARACTERS ESPACIO IS 33.
+               SYMBOLIC CHARACTERS ESPACIO ARE 33
+                                   ANGULAR-DERECHA 176
+                                   ANGULAR-IZQUIERDA 175.
+
+           INPUT-OUTPUT SECTION.
+
 
        DATA DIVISION.
+
        FILE SECTION.
+
        WORKING-STORAGE SECTION.
+           01 NUMERO1 PIC 999 VALUE 15.
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
            DISPLAY "HOLA" ESPACIO "COBOL".
+           DISPLAY ANGULAR-DERECHA "HOLA BUENAS TARDES"
+           ANGULAR-IZQUIERDA.
+           DISPLAY NUMERO1.
             STOP RUN.
        END PROGRAM LEARN-COBOL.
