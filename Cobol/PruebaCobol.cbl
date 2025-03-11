@@ -2,8 +2,8 @@
        PROGRAM-ID. LEARN-COBOL.
 
        DATE-WRITTEN "04/03/2025".
-       DATE-MODIFIED "05/03/2025".
-       DATE-COMPILED "05/03/2025".
+       DATE-MODIFIED "10/03/2025".
+       DATE-COMPILED "10/03/2025".
        INSTALLATION "Pepe INC SAS".
        SECURITY "Open Source".
        REMARKS "Esta es la primera prueba".
