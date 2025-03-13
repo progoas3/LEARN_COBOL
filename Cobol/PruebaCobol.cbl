@@ -2,8 +2,8 @@
        PROGRAM-ID. LEARN-COBOL.
 
        DATE-WRITTEN "04/03/2025".
-       DATE-MODIFIED "11/03/2025".
-       DATE-COMPILED "11/03/2025".
+       DATE-MODIFIED "12/03/2025".
+       DATE-COMPILED "12/03/2025".
        INSTALLATION "Pepe INC SAS".
        SECURITY "Open Source".
        REMARKS "Esta es la primera prueba".
@@ -35,16 +35,20 @@
            01 ResultadoDecimal PIC 9(2)V9(2) VALUE 0.
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
-           COMPUTE Resultado = Numero1 + Numero2.
-           COMPUTE ResultadoDecimal = Numero1 / Numero2.
-
+      *>   COMPUTE Resultado = Numero1 + Numero2.
+      *>   COMPUTE ResultadoDecimal = Numero1 / Numero2.
+      *> Prueba de suma
+           ADD Numero1 TO Numero2, Numero3.
+      *> Prueba de Resta
+           SUBTRACT Numero2 FROM Numero1, Numero3.
+      *> Prueba Multiplicacion
+           MULTIPLY Numero3 BY Numero1, Numero2.
+      *> Prueba DIVISION
+           DIVIDE Numero2 BY Numero3 GIVING ResultadoDecimal.
        MOSTRAR-RESULTADO.
-           DISPLAY Resultado.
-           DISPLAY "MUESTRO UN LITERAL".
-           DISPLAY CIEN-CONSTANTE.
+           DISPLAY Numero1.
+           DISPLAY Numero2.
            DISPLAY Numero3.
-           DISPLAY NumeroNegativo.
-           DISPLAY TestDecimal.
            DISPLAY ResultadoDecimal.
            STOP RUN.
        END PROGRAM LEARN-COBOL.
